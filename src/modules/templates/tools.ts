@@ -48,6 +48,43 @@ const GENRE_PRESETS: Record<string, { name: string; kind: "midi" | "audio"; devi
     { name: "Music Bed", kind: "audio", devices: ["EQ Eight"] },
     { name: "SFX", kind: "audio", devices: [] },
   ],
+  // DSM track skeletons; routing, BPM and exact FX parameters remain a Live Set task.
+  dsm_production: [
+    { name: "REF | Reference", kind: "audio", devices: ["EQ Eight"] },
+    { name: "DRUM | Kick", kind: "midi", devices: ["Drum Rack"] },
+    { name: "DRUM | Snare Clap", kind: "midi", devices: ["Drum Rack"] },
+    { name: "DRUM | Hats Perc", kind: "midi", devices: ["Drum Rack"] },
+    { name: "BASS | Main", kind: "midi", devices: ["Operator","EQ Eight","Saturator"] },
+    { name: "MUSIC | Harmony", kind: "midi", devices: ["Electric","EQ Eight"] },
+    { name: "MUSIC | Lead", kind: "midi", devices: ["Wavetable","EQ Eight"] },
+    { name: "AUDIO | Texture", kind: "audio", devices: ["EQ Eight","Auto Filter","Reverb"] },
+    { name: "AUDIO | Vocal", kind: "audio", devices: ["EQ Eight","Compressor"] },
+    { name: "FX | Impacts Risers", kind: "audio", devices: ["Auto Filter","Delay","Reverb"] },
+    { name: "PRINT | Resampling", kind: "audio", devices: [] },
+    { name: "PRINT | Final Mix", kind: "audio", devices: [] },
+  ],
+  dsm_reverse_media: [
+    { name: "REF | Original", kind: "audio", devices: ["EQ Eight"] },
+    { name: "REF | A B Comparison", kind: "audio", devices: ["EQ Eight"] },
+    { name: "REBUILD | Drums", kind: "midi", devices: ["Drum Rack"] },
+    { name: "REBUILD | Bass", kind: "midi", devices: ["Operator","Saturator"] },
+    { name: "REBUILD | Chords", kind: "midi", devices: ["Electric","EQ Eight"] },
+    { name: "REBUILD | Lead", kind: "midi", devices: ["Wavetable","Auto Filter"] },
+    { name: "REBUILD | Texture", kind: "audio", devices: ["Auto Filter","Delay","Reverb"] },
+    { name: "REBUILD | SFX", kind: "audio", devices: ["Reverb","Delay"] },
+    { name: "PRINT | Dry", kind: "audio", devices: [] },
+    { name: "PRINT | Wet", kind: "audio", devices: [] },
+    { name: "PRINT | Final A B", kind: "audio", devices: [] },
+  ],
+  mateo_adaptive: [
+    { name: "STEM 01 | Ambience", kind: "audio", devices: ["EQ Eight","Auto Filter","Reverb"] },
+    { name: "STEM 02 | Rhythm", kind: "midi", devices: ["Drum Rack"] },
+    { name: "STEM 03 | Harmony", kind: "midi", devices: ["Electric","EQ Eight"] },
+    { name: "STEM 04 | Mateo Melody", kind: "midi", devices: ["Wavetable","EQ Eight","Delay"] },
+    { name: "STEM 05 | Emotion Action", kind: "audio", devices: ["Auto Filter","Reverb","Delay"] },
+    { name: "REF | Guide Audio", kind: "audio", devices: [] },
+    { name: "PRINT | Review Export", kind: "audio", devices: [] },
+  ],
 };
 
 export function createToolRegistry() {
